@@ -1,0 +1,268 @@
+//  Table of Contents:
+//
+//   1. Mixins
+//   2. Global
+//   3. Typography
+//   4. Animations
+//   5. Loading
+//   6. Navigation
+//   7. Projects
+//   8. Project
+//   9. Contact
+
+// 1. Mixins
+// ---------
+
+@mixin margin-one {
+  margin-bottom: 1rem;
+}
+
+@mixin margin-two {
+  margin-bottom: 2rem;
+}
+
+@mixin margin-three {
+  margin-bottom: 3rem;
+}
+
+@mixin links ($link, $hover) {
+  a {
+    color: $link;
+    &:hover {
+      color: $hover;   
+    }
+  }
+}
+
+@mixin link-underline($color, $size, $duration, $centered) {
+  color: $color;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  
+  &:before {
+    background-color: $color;
+    content: '';
+    height: $size;
+    position: absolute;
+    bottom: 0 - ($size/2);
+    transition: $duration;
+    width: 0;
+    @if $centered == 'true' {
+      left: 50%;
+      transform: translateX(-50%); 
+    }
+  }
+  
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+// 2. Global
+// ---------
+
+html, body {
+  height: 100%;
+}
+
+body {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+:focus {
+  outline: 0;
+}
+
+nav {
+  padding: 2rem 1rem 1rem 1rem;
+  font-family: $header-font-family;
+  @include breakpoint(medium) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  @include breakpoint(large) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  padding: 0rem 1rem 0rem 1rem;
+  @include breakpoint(medium) {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+  @include breakpoint(large) {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+}
+
+footer {
+  padding: 2rem 1rem 2rem 1rem;
+  @include breakpoint(medium) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  @include breakpoint(large) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  font-family: $header-font-family;
+}
+
+a {
+  transition: $primary-transition;
+}
+
+// 3. Typography
+// -------------
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+// 4. Animations
+// ------
+
+[data-aos='fade-up'] {
+  transform: translate(0, 1rem);
+}
+
+.animate-fade-in {
+  @include mui-animation(fade(0,1));
+  animation-duration: 1s;
+}
+
+
+// 5. Loading
+// ------
+
+.loader {
+  z-index: 3;
+  position: fixed;
+  background: $secondary-color;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; 
+  opacity: 1;
+  transition: $primary-transition;
+  visibility: visible;
+  
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+// 6. Navigation
+// ------
+
+.navigation__logo {
+  z-index: 2;
+}
+
+.navigation__job {
+  z-index: 2;
+}
+
+.navigation__job a {
+  color: $color--highlight;
+}
+
+.navigation__job a:hover {
+  color: $color--black;
+}
+
+.navigation__hamburger {
+  z-index: 2;
+}
+
+.navigation--mobile {
+  z-index: 1;
+  position: fixed;
+  background: $secondary-color;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; 
+  opacity: 0;
+  transition: $primary-transition;
+  visibility: hidden;
+  font-family: $header-font-family;
+  font-size: 1.5rem;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  a {
+   padding: 1rem 0rem;
+  }
+}
+
+// 7. Projects
+// ----------
+
+.projects__list a {
+  display: block;
+  width: 100%;
+  position: relative; 
+}
+    
+.projects__list a:hover img {
+  filter: saturate(0%) brightness(40%); 
+}
+    
+.projects__list a img {
+  transition: $primary-transition;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+
+// 8. Project
+// ---------
+
+.project__credits {
+  color: $color--highlight;
+}
+
+.project__pagination a {
+  color: $color--highlight;
+}
+
+.project__pagination a:hover {
+  color: $color--black;
+}
+
+
+// 9. Info
+// ---------
+
+.info a {
+  @include link-underline($primary-color, 1px, $primary-transition, false)
+}

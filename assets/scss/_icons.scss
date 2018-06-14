@@ -1,0 +1,38 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+
+.icon-plus {
+  font-size: 1.5rem;
+  fill: scale-color($primary-color, $lightness: -50%);
+  transition: $primary-transition;
+}
+
+.icon-plus:hover {
+  fill: scale-color($primary-color, $lightness: -0%);
+}
+
+
+.icon-cross2 {
+  font-size: 1.5rem;
+  fill: scale-color($secondary-color, $lightness: -50%);
+  transition: $primary-transition;
+}
+
+.icon-cross2:hover {
+  fill: $secondary-color;
+}

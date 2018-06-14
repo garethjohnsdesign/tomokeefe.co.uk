@@ -1,0 +1,15 @@
+{
+  "name": "turbolinks5",
+  "homepage": "https://github.com/turbolinks/turbolinks",
+  "version": "5.1.1",
+  "_release": "5.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.1.1",
+    "commit": "c61cad86f70686e7f1d85f4aee4c7ff0be9b2ef2"
+  },
+  "_source": "https://github.com/turbolinks/turbolinks.git",
+  "_target": "^5.1.1",
+  "_originalSource": "turbolinks5",
+  "_direct": true
+}

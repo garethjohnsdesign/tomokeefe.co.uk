@@ -67,3 +67,5 @@ logo: "/assets/img/logo.svg"
 per_page: 12
 date_format: "%b %d, %Y"
 future: true
+imgix:
+  source: https://tom-okeefe.imgix.net

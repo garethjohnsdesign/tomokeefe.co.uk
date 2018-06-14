@@ -38,8 +38,7 @@
     "svgxuse": "^1.2.4",
     "what-input": "^5.1.0",
     "lightgallery": "^1.6.6",
-    "turbolinks5": "^5.1.1",
-    "320andup": "*"
+    "turbolinks5": "^5.1.1"
   },
   "resolutions": {
     "what-input": "^5.1.0"

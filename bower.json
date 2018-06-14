@@ -1,20 +1,28 @@
 {
-  "name": "foundation-sites-template",
-  "version": "1.0.0",
+  "name": "my-new-project",
   "authors": [
-    "ZURB <foundation@zurb.com>"
+    "John Doe <john@doe.com> (http://johndoe.com)"
   ],
-  "description": "Basic template for a new Foundation for Sites project.",
-  "main": "index.html",
+  "description": "CodeKit automatically generated this file. You should customize it according to: https://github.com/bower/spec/blob/master/json.md",
+  "main": [
+    "index.html",
+    "main.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "none"
+  ],
   "license": "MIT",
-  "homepage": "http://foundation.zurb.com",
-  "dependencies": {
-    "foundation-sites": "^6.3.0",
-    "motion-ui": "~1.2.2",
-    "what-input": "^2.1.0",
-    "wow": "wowjs#^1.1.2",
-    "svgxuse": "^1.1.23",
-    "jquery-unveil": "unveil#^1.3.0"
+  "homepage": "https://google.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/foo/bar.git"
   },
   "ignore": [
     "**/.*",
@@ -24,7 +32,16 @@
     "tests"
   ],
   "private": true,
+  "dependencies": {
+    "aos": "^2.2.0",
+    "foundation-sites": "^6.4.3",
+    "svgxuse": "^1.2.4",
+    "what-input": "^5.1.0",
+    "lightgallery": "^1.6.6",
+    "turbolinks5": "^5.1.1",
+    "320andup": "*"
+  },
   "resolutions": {
-    "what-input": "~4.0.3"
+    "what-input": "^5.1.0"
   }
 }

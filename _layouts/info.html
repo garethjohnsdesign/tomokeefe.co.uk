@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<!-- Content -->
+<div class="grid-x grid-padding-x grid-padding-y align-left">
+	
+<!-- Left -->
+	<div class="small-12 medium-4 large-4 cell">
+  {{page.contact-text | markdownify}}
+	</div>
+<!-- End Left -->
+
+<!-- Right -->
+	<div class="small-12 medium-6 large-4 cell">
+  	
+  <h4>About</h4>
+  {{ content }}
+	
+	{% if page.is-clients-shown == true %}
+  <h4>Clients</h4>
+  {% for client in page.clients %}
+  <a href="{{ client.link }}" target="_blank">{{ client.title }}</a>{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+  </p>
+  {% endif %}
+  
+  <h4>Showreel</h4>
+  <a data-open="showreel">Play</a>
+  
+<div class="full reveal" id="showreel" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="grid-y align-center" style="height: 100%">
+  
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true"><svg class="icon icon-cross2"><use xlink:href="/assets/icons/symbol-defs.svg#icon-cross2"></use></svg></span>
+  </button>
+  
+  <div class="responsive-embed widescreen">
+        <iframe src="https://player.vimeo.com/video/{{site.reel}}?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+  </div>s
+</div>
+
+  
+  
+  </div>
+<!-- End Right -->
+	
+</div>
+<!-- End Content -->
+

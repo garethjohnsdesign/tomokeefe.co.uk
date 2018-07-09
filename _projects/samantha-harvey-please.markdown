@@ -5,7 +5,7 @@ categories:
 - music
 - archive
 position: 8
-is-front: true
+is-front: false
 image: "/uploads/samantha-harvey.jpg"
 vimeo: 267447002
 director: Meji Alibi

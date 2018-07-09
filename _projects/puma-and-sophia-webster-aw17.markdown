@@ -5,7 +5,7 @@ categories:
 - commercial
 - archive
 position: 6
-is-front: true
+is-front: false
 image: "/uploads/puma-and-sophia-webster.jpg"
 vimeo: 254307131
 director: Elliot Simpson

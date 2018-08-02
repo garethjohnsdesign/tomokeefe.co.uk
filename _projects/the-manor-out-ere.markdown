@@ -4,7 +4,7 @@ date: 2018-07-09 12:51:00 Z
 categories:
 - music
 - archive
-is-front: true
+is-front: false
 image: "/uploads/the-manor-out-ere.jpg"
 vimeo: 279047177
 director: Elliot Simpson

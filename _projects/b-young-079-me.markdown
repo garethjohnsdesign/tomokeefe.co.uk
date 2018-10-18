@@ -4,6 +4,7 @@ date: 2018-07-09 12:35:00 Z
 categories:
 - music
 - archive
+position: 8
 image: "/uploads/B-YOung-079-me.jpg"
 vimeo: 279047954
 director: Kalvador Preterson

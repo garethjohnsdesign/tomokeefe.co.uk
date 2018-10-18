@@ -4,6 +4,7 @@ date: 2018-07-09 12:51:00 Z
 categories:
 - music
 - archive
+position: 7
 is-front: false
 image: "/uploads/the-manor-out-ere.jpg"
 vimeo: 279047177

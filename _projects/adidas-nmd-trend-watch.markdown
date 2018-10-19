@@ -3,8 +3,8 @@ title: Adidas — NMD Trend Watch
 date: 2016-12-15 00:00:00 Z
 categories:
 - commercial
-position: 36
-is-front: true
+position: 37
+is-front: false
 image: "/uploads/adidas-nmd-trend-watch.jpg"
 vimeo: 202411519
 director: Elliot Simpson

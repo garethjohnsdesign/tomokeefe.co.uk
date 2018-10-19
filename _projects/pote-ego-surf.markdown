@@ -3,7 +3,7 @@ title: Poté — Ego Surf
 date: 2017-02-10 17:19:00 Z
 categories:
 - music
-position: 22
+position: 23
 is-front: false
 image: "/uploads/pote-ego-surf.jpg"
 vimeo: 202376637

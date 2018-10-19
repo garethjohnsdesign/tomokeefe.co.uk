@@ -3,7 +3,7 @@ title: Tom Chaplain — Hardened Heart
 date: 2016-08-10 00:00:00 Z
 categories:
 - music
-position: 33
+position: 34
 is-front: false
 image: "/uploads/tom-chaplain-hardened-heart.jpg"
 vimeo: 180320349

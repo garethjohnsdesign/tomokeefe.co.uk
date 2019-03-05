@@ -5,7 +5,7 @@ categories:
 - music
 - archive
 position: 12
-is-front: true
+is-front: false
 image: "/uploads/The_manor_ibiza.jpg"
 vimeo: 284729506
 director: Elliot Simpson

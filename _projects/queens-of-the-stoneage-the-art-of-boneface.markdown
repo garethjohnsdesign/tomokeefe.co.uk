@@ -5,7 +5,7 @@ categories:
 - commercial
 - archive
 position: 7
-is-front: true
+is-front: false
 image: "/uploads/queens-of-the-stone-age-boneface.jpg"
 vimeo: 282848175
 production-company: Kode Media

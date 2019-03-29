@@ -7,7 +7,7 @@ categories:
 position: 0
 is-front: true
 image: "/uploads/jelani-blackman-lockjaw.jpg"
-vimeo: 295808505/7bb2444adb
+vimeo: 295808505
 director: Joa Retorta
 production-company: Bullion
 ---

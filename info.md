@@ -34,6 +34,12 @@ clients:
   link: www.bbc.co.uk
 - title: Soptify
   link: 
+- title: Raider Zero
+  link: 
+- title: BT SPORT
+  link: 
+- title: 
+  link: 
 is-collaborators-shown: false
 collaborators:
 - title: Matt Walker
@@ -47,4 +53,4 @@ layout: info
 
 Tom O’Keefe has worked in the film industry within the camera department, as Loader, Focus Puller and Camera Operator following a BA in Film and TV production. 
 
-Today as an established and experienced Director of Photography he has shot commercials for brands like Adidas, Marmite and Argos; music videos for Queens of the Stone Age, Professor Green, Wretch32 and Stormzy.
+Today as an established and experienced Director of Photography he has shot commercials for brands like Adidas, Marmite, Google and BT Sport; music videos for Queens of the Stone Age, Sean Paul, Wretch32 and Stormzy.

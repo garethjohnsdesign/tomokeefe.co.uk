@@ -6,7 +6,7 @@ categories:
 - archive
 image: "/uploads/stand_atlantic.jpg"
 vimeo: 368006905
-director: Lewis Cater
+director: Lewis Caters
 production-company: Zebrafish Media
 Field name: 
 ---

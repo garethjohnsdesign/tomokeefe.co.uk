@@ -1,6 +1,7 @@
 ---
 title: Showreel
 date: 2020-01-10 18:34:00 Z
+layout: info
 ---
 
 [SHOWREEL CLICK HERE](https://vimeo.com/316819254)

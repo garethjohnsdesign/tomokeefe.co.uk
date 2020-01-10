@@ -5,6 +5,5 @@ categories:
 - showreel
 image: "/uploads/bt-sport.jpg"
 vimeo: 316819254
-layout: music
 ---
 

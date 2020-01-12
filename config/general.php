@@ -81,7 +81,7 @@ return [
     'production' => [
 
         'siteUrl' => [
-            'default' => 'https://www.tomokeefe.co.uk',
+            'default' => 'https://tomokeefe-prod.frb.io',
         ],
 
         'devMode' => false,

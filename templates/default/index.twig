@@ -4,6 +4,52 @@
 
 {% block main %}
 
+<!-- Hero -->
+{#
+{% set image = entry.image.one() %}
+<div class="image--24-1 align-center-middle">
+
+  <div class="grid-y grid-padding-x height-100 align-center content" data-aos="fade-in">
+    <div class="shrink cell">
+
+      <div class="grid-x">
+        <div class="small-12 cell text-center white">
+        <svg class="icon icon-logo"><use xlink:href="/assets/icons/symbol-defs.svg#icon-logo"></use></svg>
+Test
+        </div>
+      </div>
+
+    </div>
+  </div>
+#}
+
+  {% if entry.video %}
+      <div class="grid-x viewheight">
+        <div class="small-12 cell text-center white">
+          <div class="vimeo-wrapper">
+             <iframe src="https://player.vimeo.com/video/316819254?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+  {% endif %}
+
+{#
+  <div class="grid-y grid-padding-x height-100 align-right scrollarrow" data-aos="fade-in">
+    <div class="shrink cell">
+
+      <div class="grid-x padding-vertical-2">
+        <div class="small-12 cell text-center white">
+        <a data-scroll href="#page__content"><svg class="icon icon-arrow-down"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow-down"></use></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+#}
+<!-- End Hero -->
+
 <!-- Layout -->
 <div class="grid-x grid-padding-x grid-padding-y">
   

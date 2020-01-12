@@ -1,0 +1,6 @@
+/storage
+/vendor
+.DS_Store
+.sass-cache
+_site/*
+node_modules/

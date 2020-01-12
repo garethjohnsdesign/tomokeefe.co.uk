@@ -1,0 +1,81 @@
+{# ------------------------ #}
+{# Available Variables #}
+{# ------------------------ #}
+{# Attributes: #}
+{# type, name, handle, instructions, attribute, default, feed, feedData #}
+{# ------------------------ #}
+{# Fields: #}
+{# name, handle, instructions, feed, feedData, field, fieldClass #}
+{# ------------------------ #}
+
+{% import 'feed-me/_macros' as feedMeMacro %}
+{% import '_includes/forms' as forms %}
+
+{# Special case when inside another complex field (Matrix) #}
+{% if parentPath is defined %}
+	{% set prefixPath = parentPath %}
+{% else %}
+	{% set prefixPath = [handle] %}
+{% endif %}
+
+{% set classes = ['complex-field'] %}
+
+<tr class="complex-field complex-field-header">
+	<td class="col-field" colspan="3">
+		<div class="field">
+			<div class="heading">
+				<label class="">{{ name }}</label>
+			</div>
+
+			<div class="additional-mapping-fields">
+				{% namespace 'fieldMapping[' ~ prefixPath | join('][') ~ ']' %}
+					<input type="text" name="field" value="{{ className(field) }}">
+				{% endnamespace %}
+			</div>
+		</div>
+	</td>
+</tr>
+
+{% set simpleMapSubfields = {
+	lat: 'Latitude'|t('simplemap'),
+	lng: 'Longitude'|t('simplemap'),
+	zoom: 'Zoom'|t('simplemap'),
+	address: 'Full Address'|t('simplemap'),
+	'parts.number': 'Number'|t('simplemap'),
+	'parts.address': 'Address'|t('simplemap'),
+	'parts.city': 'City'|t('simplemap'),
+	'parts.postcode': 'Postcode'|t('simplemap'),
+	'parts.county': 'County'|t('simplemap'),
+	'parts.state': 'State'|t('simplemap'),
+	'parts.country': 'Country'|t('simplemap'),
+} %}
+
+{% for key, col in simpleMapSubfields %}
+	{% set splitKey = '.' in key %}
+	{% set subKey = null %}
+
+	{% if splitKey %}
+		{% set key = key|split('.') %}
+		{% set subKey = key[1] %}
+		{% set key = key[0] %}
+	{% endif %}
+
+	{% set nameLabel = col %}
+	{% set instructionsHandle = handle ~ '[' ~ key ~ ']' ~ (subKey ? '[' ~ subKey ~ ']') %}
+
+	{% set path = prefixPath | merge ([ 'fields', key, subKey ]|filter) %}
+
+	{% set default = default ?? {
+		type: 'text',
+	} %}
+
+	{% embed 'feed-me/_includes/fields/_base' %}
+		{% block additionalFieldSettings %}
+
+		{% endblock %}
+
+		{% block fieldSettings %}
+
+		{% endblock %}
+	{% endembed %}
+{% endfor %}

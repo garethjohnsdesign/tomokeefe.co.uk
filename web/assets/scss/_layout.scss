@@ -1,0 +1,426 @@
+//  Table of Contents:
+//
+//   1. Mixins
+//   2. Global
+//   3. Animations
+//   4. Color
+//   5. Typography
+//   6. Layout
+
+
+// 1. Mixins
+// ---------
+
+@mixin links ($link, $hover) {
+  a {
+    color: $link;
+    &:hover {
+      color: $hover;   
+    }
+  }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+ .content {
+    transition: $primary-transition;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// 2. Global
+// ---------
+
+.viewheight {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+a {
+  transition: all .35s cubic-bezier(.39, .575, .565, 1);
+}
+
+a:focus {
+color: $white;
+}
+
+body {
+  cursor: default;
+  font-kerning: normal ;
+  margin: 0
+}
+
+svg {
+  max-width: 100%;
+}
+
+::selection {
+  background: $primary-color;
+  color: $black;
+}
+
+:focus {
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+// text-transform: lowercase;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+// text-transform: lowercase;
+}
+
+// 3. Animations
+// -------------
+
+.swup-transition-fade-up {
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.is-animating .swup-transition-fade-up {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.swup-transition-fade {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .swup-transition-fade {
+  opacity: 0;
+}
+
+.swup-transition-color {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .swup-transition-color {
+  opacity: 0;
+}
+
+// 2. Loading
+// ----------
+
+.loader {
+    z-index: 1040;
+    position: fixed;
+    background: $white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    opacity: 0;
+    visibility: visible; 
+    transform: translateY(0%);
+    transition: transform 800ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow: hidden;
+  &.loading {
+    opacity: 1;
+  }
+  &.loaded {
+    transform: translateY(-100%);
+    transition: transform 800ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+// 4. Color
+// --------
+
+.primary-color {
+  color: get-color(primary);
+}
+
+.secondary-color {
+  color: get-color(secondary);
+}
+
+.tertiary-color {
+  color: get-color(tertiary);
+}
+
+.primary-background-color {
+  background-color: get-color(primary);
+  color: $white;
+  @include links($white, $secondary-color)
+}
+
+
+.secondary-background-color {
+  background-color: get-color(secondary);
+  color: $primary-color;
+  @include links($primary-color, $secondary-color)
+}
+
+.light-gray-background-color {
+  background-color: $light-gray;
+  color: $black;
+  @include links($primary-color, $secondary-color)
+}
+
+
+.black-background-color {
+  background-color: $black;
+  color: $white;
+  @include links($white, $secondary-color)
+}
+
+.tertiary-background-colour {
+  background-color: get-color(tertiary);
+  color: $primary-color;
+  @include links($primary-color, $secondary-color)
+}
+
+.white {
+  color: $white;
+  @include links ($white, $medium-gray);
+}
+
+.medium-gray {
+  color: $medium-gray;
+  @include links ($medium-gray, $black);
+}
+
+.light-gray {
+  color: $light-gray;
+  @include links ($light-gray, $medium-gray);
+}
+
+.dark-gray {
+  color: $dark-gray;
+  @include links ($dark-gray, $white);
+}
+
+.black {
+  color: $black;
+  @include links ($black, $medium-gray);
+}
+
+// 5. Typography
+// -------------
+
+.underline {
+  padding-bottom: 2px;
+  border-bottom: 3px solid;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+p a {
+  border-bottom: 1px solid $black;
+}
+
+.sans-light {
+  font-family: $sans-light;
+}
+
+.sans-regular {
+  font-family: $sans-regular;
+}
+
+.sans-bold {
+  font-family: $sans-bold;
+}
+
+.sans-display {
+  font-family: $sans-display;
+}
+
+.serif-light {
+  font-family: $serif-light;
+}
+
+.serif-regular {
+  font-family: $serif-regular;
+}
+
+.serif-italic {
+  font-family: $serif-italic;
+}
+
+.serif-bold {
+  font-family: $serif-bold;
+}
+
+.serif-display {
+  font-family: $serif-display;
+}
+
+.small {
+  font-size: $small-font-size;
+}
+
+// 6. Layout
+// ---------
+
+.image--1-1 {
+  @include aspect-ratio (1, 1);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--3-4 {
+  @include aspect-ratio (3, 4);
+  background-size: cover; 
+  background-position: 50%;
+  background-color: $black;
+}
+
+.image--5-7 {
+  @include aspect-ratio (5, 7);
+  background-size: cover; 
+  background-position: 50%;
+  background-color: $black;
+}
+
+.image--7-5 {
+  @include aspect-ratio (7, 5);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--16-9 {
+  @include aspect-ratio (16, 9);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--24-1 {
+  @include aspect-ratio (2.4, 1);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--hero {
+  background-size: cover; 
+  background-position: 50%;
+  @include breakpoint(small) {
+  @include aspect-ratio (1, 1);
+  }
+  @include breakpoint(medium) {
+  @include aspect-ratio (16, 9);
+  }
+ .content {
+//   background-color: rgba($black, 0.075);
+  }
+}
+
+
+// 6. Navigation
+// -------------
+
+.navigation {
+  width: 100%;
+  .cell {
+	z-index: 14; 
+  }
+}
+
+.hamburger-inner {
+  &,
+  &::before,
+  &::after {
+    background-color: $white;
+  }
+}
+
+// 9. Home
+// -------
+
+/*
+.home .navigation, .about .navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+*/
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1rem;
+  @include breakpoint(medium) {
+    padding: 2rem;
+  }
+  @include breakpoint(large) {
+    padding: 3rem;
+  }
+}
+
+.footer {
+// border-top: 1px solid $light-gray;
+/*
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+*/
+}
+
+.off-canvas .menu .active > a {
+  background: transparent;
+  color: $black;
+}
+
+.navigation {
+  transform: all .35s cubic-bezier(.39, .575, .565, 1);
+}
+
+.home__title {
+  transform: all .35s cubic-bezier(.39, .575, .565, 1);
+}
+
+.home__menu {
+  transform: all .35s cubic-bezier(.39, .575, .565, 1);
+}
+
+.viewheight {
+//   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.act--link {
+  .content:hover {
+  background-color: rgba($black, 0.6);
+  }
+  &:hover .act__title {
+  opacity: 0;
+  transition: $primary-transition;
+  }
+  &:hover .act__hover {
+  opacity: 1;
+  transition: $primary-transition;
+  } 
+}
+
+.act__title {
+  z-index: 1;
+  opacity: 1;
+}
+
+.act__hover {
+  z-index: 1;
+  opacity: 0;
+}

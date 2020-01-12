@@ -1,0 +1,41 @@
+{
+    "name": "verbb/field-manager",
+    "description": "Manage your fields and field groups with ease with simple field or group cloning and quicker overall management.",
+    "type": "craft-plugin",
+    "version": "2.1.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "field manager"
+    ],
+    "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/field-manager/issues?state=open",
+        "source": "https://github.com/verbb/field-manager",
+        "docs": "https://github.com/verbb/field-manager",
+        "rss": "https://github.com/verbb/field-manager/commits/v2.atom"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "verbb\\fieldmanager\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Field Manager",
+        "handle": "field-manager",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/field-manager/craft-3/CHANGELOG.md",
+        "class": "verbb\\fieldmanager\\FieldManager"
+    }
+}

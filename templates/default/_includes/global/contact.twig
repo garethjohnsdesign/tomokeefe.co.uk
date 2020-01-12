@@ -1,0 +1,30 @@
+<div class="primary-background-color padding-top-3">
+  <div class="grid-x align-center">
+    <div class="shrink cell">
+      <ul class="menu align-center">
+        <li><a href="{{site.phoneNumber}}" target="_blank">{{site.phoneNumber}}</a></li>
+        <li><a href="{{site.email}}" target="_blank">{{site.email}}</a></li>
+      </ul>
+
+      <ul class="menu align-center margin-top-1">
+        {% for block in site.socials.all() %}
+        {% switch block.type %}
+          {% case "facebook" %}
+        
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-facebook"><use xlink:href="/assets/icons/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+        
+          {% case "instagram" %}
+          
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-instagram"><use xlink:href="/assets/icons/symbol-defs.svg#icon-instagram"></use></svg></a></li>
+        
+          {% case "twitter" %}
+          
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-twitter"><use xlink:href="/assets/icons/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+          {% endswitch %}
+        {% endfor %}
+      </ul>
+
+
+    </div>
+  </div>
+</div>

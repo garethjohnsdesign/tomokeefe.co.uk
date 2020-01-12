@@ -1,0 +1,38 @@
+{% set bodyClass = 'info' %}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<div class="grid-x grid-padding-x align-center">
+  <div class="small-12 cell text-center">
+
+<!-- Copy -->
+<div class="grid-x grid-padding-x align-center">
+  <div class="small-12 cell text-center">
+    {{entry.copy}}
+  </div>
+</div>
+<!-- End Copy -->
+
+<!-- Socials -->
+{% include "_includes/global/socials" %}
+<!-- End Socials -->
+
+<!-- Terms and Privacy -->
+<div class="grid-x grid-padding-x align-center">
+  <div class="small-12 cell text-center">
+    <ul class="menu align-center">
+      <li><a href="/terms">Terms</a></li>
+      <li><a href="/privacy-policy">Privacy</a></li>
+    </ul>
+  </div>
+</div>
+<!-- End Terms and Privacy -->
+
+  </div>
+</div>
+
+
+
+{% endblock %}

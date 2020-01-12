@@ -1,0 +1,30 @@
+<div class="grid-y align-center-middle navigation show-for-small-only" style="height: 4rem;">
+  <div class="shrink cell text-center" style="z-index: 10;">
+    <a data-toggle="overlayNavigation" class="text-uppercase sans-bold h3 text-center">{{siteName}}</a>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="grid-y align-center-middle navigation show-for-medium" style="height: 4rem;">
+  <div class="shrink cell padding-2" style="z-index: 10;">
+
+    <div class="home__title">
+      <div class="h3 margin-bottom-0 text-center text-uppercase">{{siteName}}</div>
+    </div>
+
+    <div class="home__menu hide">
+      <ul class="menu align-center">
+        <li><a href="/" class="text-uppercase sans-bold h3">Home</a></li>
+        {% nav category in craft.categories.group('typeOfFilm') %}
+            <li>
+             <a href="{{ category.url }}" class="text-uppercase sans-bold h4">{{ category.title }}</a>
+            </li>
+        {% endnav %}
+        <li><a href="/about" class="text-uppercase sans-bold h4">About</a></li>
+        <li><a href="/contact" class="text-uppercase sans-bold h4">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<!-- End  Header -->

@@ -1,0 +1,11 @@
+[30-Oct-2019 14:39:07 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 49
+[30-Oct-2019 14:39:30 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 49
+[30-Oct-2019 14:40:03 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 49
+[30-Oct-2019 14:40:46 UTC] PHP Parse error:  syntax error, unexpected ',' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 76
+[30-Oct-2019 14:40:58 UTC] PHP Parse error:  syntax error, unexpected ']' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 77
+[30-Oct-2019 14:41:04 UTC] PHP Parse error:  syntax error, unexpected ']' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 77
+[30-Oct-2019 14:42:04 UTC] PHP Parse error:  syntax error, unexpected ',' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 76
+[30-Oct-2019 14:42:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 76
+[30-Oct-2019 14:42:43 UTC] PHP Parse error:  syntax error, unexpected ']' in /Users/garethjohns/Documents/Development/813-studio.beta/config/general.php on line 77
+[28-Nov-2019 15:56:22 UTC] PHP Parse error:  syntax error, unexpected '[', expecting '(' in /Users/garethjohns/Documents/Development/fiftyseven/config/general.php on line 14
+[28-Nov-2019 15:56:33 UTC] PHP Parse error:  syntax error, unexpected '[', expecting '(' in /Users/garethjohns/Documents/Development/fiftyseven/config/general.php on line 14

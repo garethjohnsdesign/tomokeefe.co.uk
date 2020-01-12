@@ -1,0 +1,25 @@
+{% set bodyClass = 'category' %}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<!-- Projects -->
+{% set projects = craft.entries
+.section('projects')
+.order('postDate desc')
+.all() %}
+
+<div class="grid-x grid-padding-x grid-padding-y">
+  {% for project in projects %}
+    <div class="small-12 medium-6 large-4 cell text-center">
+      <a href="{{ project.url }}">
+        {% set image = project.image.one() %}
+        <div class="margin-bottom-1 image--24-1" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-4" %}"></div>
+        <div class="sans-regular text-center"><span class="project__title sans-bold text-uppercase">{{ project.title }}</span>{% if project.client %}<span class="dark-gray project__client padding-left-1">{{ project.client }}</span>{% endif %}</div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+<!-- End Projects -->
+{% endblock %}

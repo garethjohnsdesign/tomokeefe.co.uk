@@ -1,0 +1,8 @@
+#select-fields-modal {
+  padding: 20px;
+  overflow: scroll;
+}
+
+#select-fields-modal .field-edit-modal-bar {
+  margin-top: 20px;
+}

@@ -1,0 +1,360 @@
+2020-01-07 12:41:10 [-][1][-][error][field-manager] Could not clone {name} - {errors}.
+2020-01-07 12:41:09 [-][1][-][info][application] $_GET = [
+    'p' => 'admin/actions/field-manager/base/clone-field'
+]
+
+$_POST = [
+    'redirect' => 'field-manager'
+    'fieldId' => '116'
+    'group' => '18'
+    'name' => 'Location'
+    'handle' => 'location'
+    'instructions' => ''
+    'type' => 'craft\\fields\\Matrix'
+    'types' => [
+        'craft\\fields\\Assets' => [
+            'useSingleFolder' => ''
+            'sources' => '*'
+            'defaultUploadLocationSource' => 'folder:4f154a80-b245-4d68-97de-eb74ac503249'
+            'defaultUploadLocationSubpath' => ''
+            'singleUploadLocationSource' => 'folder:4f154a80-b245-4d68-97de-eb74ac503249'
+            'singleUploadLocationSubpath' => ''
+            'showUnpermittedVolumes' => ''
+            'showUnpermittedFiles' => ''
+            'restrictFiles' => ''
+            'limit' => ''
+            'viewMode' => 'list'
+            'selectionLabel' => ''
+            'validateRelatedElements' => ''
+        ]
+        'craft\\fields\\Categories' => [
+            'branchLimit' => ''
+            'selectionLabel' => ''
+            'validateRelatedElements' => ''
+        ]
+        'craft\\fields\\Checkboxes' => [
+            'options' => [
+                0 => [
+                    'label' => ''
+                    'value' => ''
+                    'default' => ''
+                ]
+            ]
+        ]
+        'craft\\fields\\Color' => [
+            'defaultColor' => ''
+        ]
+        'craft\\fields\\Date' => [
+            'dateTime' => 'showDate'
+            'minuteIncrement' => '30'
+        ]
+        'craft\\fields\\Dropdown' => [
+            'options' => [
+                0 => [
+                    'isOptgroup' => ''
+                    'label' => ''
+                    'value' => ''
+                    'default' => ''
+                ]
+            ]
+        ]
+        'craft\\fields\\Email' => [
+            'placeholder' => ''
+        ]
+        'craft\\fields\\Entries' => [
+            'sources' => '*'
+            'limit' => ''
+            'selectionLabel' => ''
+            'validateRelatedElements' => ''
+        ]
+        'craft\\fields\\Lightswitch' => [
+            'default' => ''
+        ]
+        'craft\\fields\\Matrix' => [
+            'blockTypes' => [
+                11 => [
+                    'name' => 'Location'
+                    'handle' => 'location'
+                    'fields' => [
+                        117 => [
+                            'name' => 'Copy'
+                            'handle' => 'copy'
+                            'instructions' => ''
+                            'required' => '1'
+                            'searchable' => '1'
+                            'type' => 'craft\\redactor\\Field'
+                            'typesettings' => [
+                                'redactorConfig' => 'Simple.json'
+                                'availableVolumes' => '*'
+                                'removeInlineStyles' => '1'
+                                'removeEmptyTags' => '1'
+                                'removeNbsp' => '1'
+                                'purifyHtml' => '1'
+                                'purifierConfig' => ''
+                                'columnType' => 'text'
+                            ]
+                        ]
+                        118 => [
+                            'name' => 'Header'
+                            'handle' => 'header'
+                            'instructions' => ''
+                            'required' => '1'
+                            'searchable' => '1'
+                            'type' => 'craft\\fields\\PlainText'
+                            'typesettings' => [
+                                'placeholder' => ''
+                                'fieldLimit' => ''
+                                'limitUnit' => 'chars'
+                                'code' => ''
+                                'multiline' => ''
+                                'initialRows' => '4'
+                                'columnType' => 'text'
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            'minBlocks' => ''
+            'maxBlocks' => ''
+        ]
+        'craft\\fields\\MultiSelect' => [
+            'options' => [
+                0 => [
+                    'isOptgroup' => ''
+                    'label' => ''
+                    'value' => ''
+                    'default' => ''
+                ]
+            ]
+        ]
+        'craft\\fields\\Number' => [
+            'defaultValue' => ''
+            'min' => '0'
+            'max' => ''
+            'decimals' => '0'
+            'size' => ''
+            'prefix' => ''
+            'suffix' => ''
+        ]
+        'craft\\fields\\PlainText' => [
+            'placeholder' => ''
+            'fieldLimit' => ''
+            'limitUnit' => 'chars'
+            'code' => ''
+            'multiline' => ''
+            'initialRows' => '4'
+            'columnType' => 'auto'
+        ]
+        'craft\\fields\\RadioButtons' => [
+            'options' => [
+                0 => [
+                    'label' => ''
+                    'value' => ''
+                    'default' => ''
+                ]
+            ]
+        ]
+        'craft\\fields\\Table' => [
+            'columns' => [
+                'col1' => [
+                    'heading' => ''
+                    'handle' => ''
+                    'width' => ''
+                    'type' => 'singleline'
+                ]
+            ]
+            'defaults' => [
+                0 => [
+                    'col1' => ''
+                ]
+            ]
+            'minRows' => ''
+            'maxRows' => ''
+            'addRowLabel' => 'Add a row'
+            'columnType' => 'text'
+        ]
+        'craft\\fields\\Tags' => [
+            'selectionLabel' => ''
+            'validateRelatedElements' => ''
+        ]
+        'craft\\fields\\Url' => [
+            'placeholder' => ''
+            'maxLength' => '255'
+        ]
+        'craft\\fields\\Users' => [
+            'sources' => '*'
+            'limit' => ''
+            'selectionLabel' => ''
+            'validateRelatedElements' => ''
+        ]
+        'craft\\ckeditor\\Field' => [
+            'purifyHtml' => '1'
+            'purifierConfig' => ''
+            'columnType' => 'text'
+        ]
+        'craft\\redactor\\Field' => [
+            'redactorConfig' => ''
+            'availableVolumes' => '*'
+            'removeInlineStyles' => '1'
+            'removeEmptyTags' => '1'
+            'removeNbsp' => '1'
+            'purifyHtml' => '1'
+            'purifierConfig' => ''
+            'columnType' => 'text'
+        ]
+        'ether\\simplemap\\fields\\MapField' => [
+            'lat' => '51.272154'
+            'lng' => '0.514951'
+            'zoom' => '15'
+            'hideSearch' => ''
+            'hideMap' => ''
+            'hideAddress' => ''
+            'showLatLng' => ''
+            'showCurrentLocation' => ''
+            'size' => 'normal'
+            'country' => '*'
+            'minZoom' => '3'
+            'maxZoom' => '18'
+        ]
+        'rias\\positionfieldtype\\fields\\Position' => [
+            'options' => [
+                'left' => ''
+                'center' => ''
+                'right' => ''
+                'full' => ''
+                'drop-left' => ''
+                'drop-right' => ''
+            ]
+            'default' => ''
+        ]
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_identity' => 'f2e957325a54a7803ce575217e3a1630cd0d64baa4639f035818bf69f4a806b3a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_identity\";i:1;s:248:\"[\"1\",\"[\\\"hN6eVOgfTOvzEVZDiVF_tYqJ0Jmdjj8GUgxpk6FqpLcOQFwaCxPExVHTyAkw313oUzkLHwOJFtWWAkCRDO6WLVD2_5lCczvMBrrK\\\",null,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15\\\"]\",3600]\";}'
+    '_ga' => 'GA1.2.1429518272.1578051455'
+    '_gid' => 'GA1.2.910599622.1578387830'
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => 'eb5aea264790906e8015b54f206041eaaf173ecb59343fb6c699d80f48740a86a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:5:\"admin\";}'
+    'CRAFT_CSRF_TOKEN' => '•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'CraftSessionId' => 'dp01cskko6s91sp0pngbih7dgo'
+    '__stripe_mid' => '0da16640-5106-4ad7-ac9b-dce04486e340'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+    '1031b8c41dfff97a311a7ac99863bdc5__token' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    '1031b8c41dfff97a311a7ac99863bdc5__id' => '1'
+    '1031b8c41dfff97a311a7ac99863bdc5__expire' => 1578404470
+    'enableDebugToolbarForSite' => true
+    'enableDebugToolbarForCp' => true
+    'bd62416aa8538ede709019a5e113eea5__auth_access' => [
+        0 => 'previewElement:3'
+        1 => 'saveAssetInVolume:15'
+        2 => 'previewDraft:176'
+        3 => 'previewElement:3208'
+        4 => 'previewElement:5153'
+        5 => 'previewElement:4380'
+    ]
+]
+
+$_SERVER = [
+    'PHP_FCGI_CHILDREN' => '4'
+    'PWD' => '/Applications/MAMP/fcgi-bin'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '200'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x2'
+    'ORIG_SCRIPT_NAME' => '/fcgi-bin/php7.3.8.fcgi'
+    'ORIG_PATH_TRANSLATED' => '/Users/garethjohns/Documents/Development/ambigubakery.com/web/index.php'
+    'ORIG_PATH_INFO' => '/index.php'
+    'ORIG_SCRIPT_FILENAME' => '/Applications/MAMP/fcgi-bin/php7.3.8.fcgi'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?p=admin/actions/field-manager/base/clone-field'
+    'QUERY_STRING' => 'p=admin/actions/field-manager/base/clone-field'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/index.php'
+    'REDIRECT_QUERY_STRING' => 'p=admin/actions/field-manager/base/clone-field'
+    'REMOTE_PORT' => '63534'
+    'SCRIPT_FILENAME' => '/Users/garethjohns/Documents/Development/ambigubakery.com/web/index.php'
+    'SERVER_ADMIN' => 'you@example.com'
+    'DOCUMENT_ROOT' => '/Users/garethjohns/Documents/Development/ambigubakery.com/web'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '443'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'ambigubakery.test'
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_SIGNATURE' => ''
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_identity=f2e957325a54a7803ce575217e3a1630cd0d64baa4639f035818bf69f4a806b3a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_identity%22%3Bi%3A1%3Bs%3A248%3A%22%5B%221%22%2C%22%5B%5C%22hN6eVOgfTOvzEVZDiVF_tYqJ0Jmdjj8GUgxpk6FqpLcOQFwaCxPExVHTyAkw313oUzkLHwOJFtWWAkCRDO6WLVD2_5lCczvMBrrK%5C%22%2Cnull%2C%5C%22Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_15_2%29+AppleWebKit%2F605.1.15+%28KHTML%2C+like+Gecko%29+Version%2F13.0.4+Safari%2F605.1.15%5C%22%5D%22%2C3600%5D%22%3B%7D; _ga=GA1.2.1429518272.1578051455; _gid=GA1.2.910599622.1578387830; 1031b8c41dfff97a311a7ac99863bdc5_username=eb5aea264790906e8015b54f206041eaaf173ecb59343fb6c699d80f48740a86a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3B%7D; CRAFT_CSRF_TOKEN=404efcc877634d601929eeefcbffe600feb33f6400c8024eace01a6376b68b18a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A208%3A%22lWnbpCcaw1Q9eQn19JXMibIsTZPfW2PoafzCqTMa%7Cbdf1583d354ecb4f8c1a8e1ffdffa117e9b5c921d1ea14bb64afe8d73b1c1f03lWnbpCcaw1Q9eQn19JXMibIsTZPfW2PoafzCqTMa%7C1%7C%242y%2413%24GBdWexpV5twEY.%2FJ4Lza6OwIQ8Ev9k7k2va.eyOzFAGO1LnqyldSq%22%3B%7D; CraftSessionId=dp01cskko6s91sp0pngbih7dgo; __stripe_mid=0da16640-5106-4ad7-ac9b-dce04486e340'
+    'HTTP_X_CSRF_TOKEN' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '9638'
+    'HTTP_REFERER' => 'https://ambigubakery.test/admin/field-manager'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15'
+    'HTTP_ORIGIN' => 'https://ambigubakery.test'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-gb'
+    'HTTP_X_REGISTERED_ASSET_BUNDLES' => ',verbb\\fieldmanager\\assetbundles\\FieldManagerAsset,craft\\web\\assets\\cp\\CpAsset,craft\\web\\assets\\axios\\AxiosAsset,craft\\web\\assets\\d3\\D3Asset,craft\\web\\assets\\elementresizedetector\\ElementResizeDetectorAsset,craft\\web\\assets\\garnish\\GarnishAsset,yii\\web\\JqueryAsset,craft\\web\\assets\\jquerytouchevents\\JqueryTouchEventsAsset,craft\\web\\assets\\velocity\\VelocityAsset,craft\\web\\assets\\jqueryui\\JqueryUiAsset,craft\\web\\assets\\jquerypayment\\JqueryPaymentAsset,craft\\web\\assets\\datepickeri18n\\DatepickerI18nAsset,craft\\web\\assets\\picturefill\\PicturefillAsset,craft\\web\\assets\\selectize\\SelectizeAsset,craft\\web\\assets\\fileupload\\FileUploadAsset,craft\\web\\assets\\xregexp\\XregexpAsset,craft\\web\\assets\\fabric\\FabricAsset'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_REGISTERED_JS_FILES' => ',https://ambigubakery.test/cpresources/b31b9ba5/axios.min.js?v=1578304112,https://ambigubakery.test/cpresources/64e5abe2/d3.js?v=1578304112,https://ambigubakery.test/cpresources/c97a1cc1/element-resize-detector.js?v=1578304112,https://ambigubakery.test/cpresources/e6eab734/jquery.js?v=1578304112,https://ambigubakery.test/cpresources/6de4b771/jquery.mobile-events.min.js?v=1578304112,https://ambigubakery.test/cpresources/f7654049/velocity.js?v=1578304112,https://ambigubakery.test/cpresources/5758bc64/garnish.js?v=1578304112,https://ambigubakery.test/cpresources/b9ccdbec/jquery-ui.min.js?v=1578304112,https://ambigubakery.test/cpresources/eb42efa1/jquery.payment.js?v=1578304112,https://ambigubakery.test/cpresources/6a408bb3/picturefill.js?v=1578304113,https://ambigubakery.test/cpresources/3e3ea637/selectize.js?v=1578304113,https://ambigubakery.test/cpresources/72a88a4d/jquery.fileupload.js?v=1578304113,https://ambigubakery.test/cpresources/3452e2bd/xregexp-all.js?v=1578304113,https://ambigubakery.test/cpresources/421e685a/fabric.js?v=1578304113,https://ambigubakery.test/cpresources/3811837e/js/Craft.min.js?v=1578304112,https://ambigubakery.test/cpresources/dcce1f17/js/field-manager.js?v=1577713775'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_HOST' => 'ambigubakery.test'
+    'SSL_TLS_SNI' => 'ambigubakery.test'
+    'HTTPS' => 'on'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_HANDLER' => 'php-fastcgi'
+    'REDIRECT_SSL_SESSION_ID' => 'B5748754DCB172D50A210C9E7939F1C3BE8C46A1F8F11E724711089CF58B4B52'
+    'REDIRECT_SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'REDIRECT_SSL_SERVER_A_KEY' => '•••••••••••••'
+    'REDIRECT_SSL_SERVER_I_DN' => '/C=UK/L=London/O=garethjohnsdesign.com/emailAddress=info@garethjohnsdesign.com/CN=ambigubakery.test'
+    'REDIRECT_SSL_SERVER_S_DN' => '/C=UK/L=London/O=garethjohnsdesign.com/emailAddress=info@garethjohnsdesign.com/CN=ambigubakery.test'
+    'REDIRECT_SSL_SERVER_V_END' => 'Dec 20 17:21:47 2020 GMT'
+    'REDIRECT_SSL_SERVER_V_START' => 'Dec 21 17:21:47 2019 GMT'
+    'REDIRECT_SSL_SERVER_M_SERIAL' => '912DE618BBC683CE'
+    'REDIRECT_SSL_SERVER_M_VERSION' => '3'
+    'REDIRECT_SSL_CLIENT_VERIFY' => 'NONE'
+    'REDIRECT_SSL_CIPHER_ALGKEYSIZE' => '256'
+    'REDIRECT_SSL_CIPHER_USEKEYSIZE' => '256'
+    'REDIRECT_SSL_CIPHER_EXPORT' => 'false'
+    'REDIRECT_SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'REDIRECT_SSL_COMPRESS_METHOD' => 'NULL'
+    'REDIRECT_SSL_SECURE_RENEG' => 'true'
+    'REDIRECT_SSL_PROTOCOL' => 'TLSv1.2'
+    'REDIRECT_SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2o'
+    'REDIRECT_SSL_VERSION_INTERFACE' => 'mod_ssl/2.2.34'
+    'REDIRECT_SSL_SERVER_I_DN_CN' => 'ambigubakery.test'
+    'REDIRECT_SSL_SERVER_I_DN_Email' => 'info@garethjohnsdesign.com'
+    'REDIRECT_SSL_SERVER_I_DN_O' => 'garethjohnsdesign.com'
+    'REDIRECT_SSL_SERVER_I_DN_L' => 'London'
+    'REDIRECT_SSL_SERVER_I_DN_C' => 'UK'
+    'REDIRECT_SSL_SERVER_S_DN_CN' => 'ambigubakery.test'
+    'REDIRECT_SSL_SERVER_S_DN_Email' => 'info@garethjohnsdesign.com'
+    'REDIRECT_SSL_SERVER_S_DN_O' => 'garethjohnsdesign.com'
+    'REDIRECT_SSL_SERVER_S_DN_L' => 'London'
+    'REDIRECT_SSL_SERVER_S_DN_C' => 'UK'
+    'REDIRECT_SSL_TLS_SNI' => 'ambigubakery.test'
+    'REDIRECT_HTTPS' => 'on'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1578400869.6413
+    'REQUEST_TIME' => 1578400869
+    'argv' => [
+        0 => 'p=admin/actions/field-manager/base/clone-field'
+    ]
+    'argc' => 1
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => '127.0.0.1'
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => '••••••••'
+    'DB_DATABASE' => 'ambigu-local'
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => ''
+    'DB_PORT' => '3306'
+    'DEFAULT_CONFIG' => 'production'
+]

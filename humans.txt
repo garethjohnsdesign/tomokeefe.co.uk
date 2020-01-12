@@ -13,29 +13,17 @@ Design + Development
 @garethjohnsabc
 
 
-SPECIAL THANKS
---------------
-
-Skylar Challand
-
-
 TECHNOLOGY
 ----------
 
-Siteleaf - Content management system
-siteleaf.com
+Craft CMS - Content management system
+craftcms.com
 
 Foundation - Front-end framework
 foundation.zurb.com
 
-Jekyll - Static site generator
-jekyllrb.com
-
 Sass - CSS pre-processor
 sass-lang.com
-
-Liquid - Templating
-shopify.github.io/liquid
 
 GitHub - Code collaboration & hosting
 github.com

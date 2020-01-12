@@ -1,0 +1,110 @@
+{% set bodyClass = 'project' %}
+
+{# Set parameters for prev/next elements list #}
+{% set params = craft.entries
+.section('projects')
+.relatedTo(entry.category)
+.order('postDate desc') %}
+
+{# Get the prev/next elements #}
+{% set prevEntry = entry.getPrev(params) %}
+{% set nextEntry = entry.getNext(params) %}
+
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+
+<!-- Content -->
+<div class="grid-x grid-padding-x grid-padding-y align-center" data-aos="fade-in">
+
+<!-- Previous -->
+<div class="medium-2 cell show-for-large project__pagination">
+  {% if prevEntry %}
+  <a href="{{ prevEntry.url }}">
+    <div class="grid-y align-center" style="height: 100%;">
+      <div class="shrink cell text-center"><svg class="icon icon-arrows icon-arrow_back"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow_back"></use></svg></div>
+    </div>
+  </a>
+  {% endif %}
+</div>
+<!-- End Previous -->
+
+<!-- Center -->
+<div class="small-12 medium-8 cell">
+
+      <div class="margin-bottom-2 sans-bold text-uppercase h4 text-center">{{ entry.title }}</div>
+
+{% if entry.video %}
+<div class="grid-x grid-padding-x align-center">
+  <div class="small-12 cell">
+  	<div class="responsive-embed widescreen">
+  	   <iframe src="https://player.vimeo.com/video/{{ entry.video }}?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  	</div>
+  </div>
+</div>
+{% endif %}
+
+
+<!-- Credits -->
+<div class="grid-x grid-padding-x align-center">
+  <div class="small-12 cell text-center">
+  
+  {% if entry.client %}
+  <div class="margin-bottom-0">B — {{ entry.client }}</div>
+  {% endif %}
+  
+  {% if entry.agency %}
+{#   <div class="margin-bottom-0">A — {{ entry.agency }}</div> #}
+  {% endif %}
+  
+  {% if entry.productionCompany %}
+{#   <div class="margin-bottom-0">P — {{ entry.productionCompany }}</div> #}
+  {% endif %}
+  
+  </div>
+</div>
+<!-- End Credit -->
+
+<!-- Content -->
+<div class="grid-x grid-padding-x grid-padding-y grid-margin-y align-center">
+  <div class="small-12 cell text-center">
+  {{ entry.copy }}
+  </div>
+</div>
+<!-- End Content -->
+
+<!-- Mobile Pagination -->
+{% if nextEntry %}
+<div class="grid-x grid-padding-x align-center hide-for-large">
+  <div class="shrink cell text-center">
+    <a href="{{ nextEntry.url }}"><svg class="icon icon-arrows icon-arrow_forward"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow_forward"></use></svg></a>
+  </div>
+</div>
+{% endif %}
+<!-- End Mobile Pagination -->
+      
+      
+      
+
+</div>
+<!-- End Center -->
+
+<!-- Next -->
+<div class="medium-2 cell show-for-large project__pagination">
+  {% if nextEntry %}
+  <a href="{{ nextEntry.url }}">
+    <div class="grid-y align-center" style="height: 100%;">
+      <div class="shrink cell text-center"><svg class="icon icon-arrows icon-arrow_forward"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow_forward"></use></svg></div>
+    </div>
+  </a>
+  {% endif %}
+</div>
+<!-- End Next -->
+
+</div>   
+<!-- End Content -->
+
+
+{% endblock %}

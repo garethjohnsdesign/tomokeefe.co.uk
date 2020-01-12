@@ -6,7 +6,7 @@ return [
 
       'transformer' => 'imgix',
 
-      'imagerUrl' => 'http://storage.googleapis.com/grant-armour/',
+      'imagerUrl' => 'http://storage.googleapis.com/tom-okeefe/',
 
       // Enables Imgix integration
       'imgixEnabled' => true,
@@ -14,7 +14,7 @@ return [
 
       'imgixConfig' => [
           'default' => [
-              'domains' => ['grant-armour.imgix.net'],
+              'domains' => ['tom-okeefe-beta.imgix.net'],
               'useHttps' => true,
               'signKey' => '',
               'sourceIsWebProxy' => false,
@@ -50,7 +50,7 @@ return [
       'storageConfig' => [
           'gcs' => [
               'keyFile' => '/key/old-blue-last-beer-238617-a12b9b142c4a.json',
-              'bucket' => 'grant-armour',
+              'bucket' => 'tom-okeefe',
               'folder' => '',
           ]
             

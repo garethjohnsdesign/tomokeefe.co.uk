@@ -1,55 +1,17 @@
 @font-face {
-  font-family: 'Louize Display';
+  font-family: 'Futura Std Condensed Extra Bold';
   src: 
-  url('../fonts/louize-display.woff2') format('woff2'), 
-  url('../fonts/louize-display.woff') format('woff');
+  url('../fonts/futura-std-condensed-extra-bold.woff2') format('woff2'), 
+  url('../fonts/futura-std-condensed-extra-bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Louize Display Italic';
+  font-family: 'Futura Std Book';
   src: 
-  url('../fonts/louize-display-italic.woff2') format('woff2'), 
-  url('../fonts/louize-display-italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Benton Sans Extra Comp Bold';
-  src: 
-  url('../fonts/benton-sans-extra-comp-bold.woff2') format('woff2'), 
-  url('../fonts/benton-sans-extra-comp-bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Walsheim Pro Bold';
-  src: 
-  url('../fonts/gt-walsheim-pro-bold.woff2') format('woff2'), 
-  url('../fonts/gt-walsheim-pro-bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Transcript Regular';
-  src: 
-  url('../fonts/transcript-regular.woff2') format('woff2'), 
-  url('../fonts/transcript-regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Transcript Bold';
-  src: 
-  url('../fonts/transcript-bold.woff2') format('woff2'), 
-  url('../fonts/transcript-bold.woff') format('woff');
+  url('../fonts/futura-std-book.woff2') format('woff2'), 
+  url('../fonts/futura-std-book.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

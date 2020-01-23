@@ -3,8 +3,19 @@
 
 import $ from "jquery";
 import Foundation from 'foundation-sites';
+import Cookies from 'js-cookie'
 import AOS from 'aos';
+import Swup from 'swup';
+import "lightGallery";
+import "lg-fullscreen";
+import "lg-video";
+import SwupBodyClassPlugin from "@swup/body-class-plugin";
+import SwupScrollPlugin from '@swup/scroll-plugin';
+import SwupGaPlugin from '@swup/ga-plugin';
 
+
+$( document ).ready( function() {
+  function init() {
 
 // 2. Foundation
 // ----------
@@ -15,6 +26,25 @@ Foundation.Interchange.SPECIAL_QUERIES['xlarge-retina'] = 'only screen and (min-
 Foundation.Interchange.SPECIAL_QUERIES['xxlarge-retina'] = 'only screen and (min-width: 90em), (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 75em) and (min--moz-device-pixel-ratio: 2), (min-width: 75em) and (-o-min-device-pixel-ratio: 2/1), (min-width: 75em) and (min-device-pixel-ratio: 2), (min-width: 75em) and (min-resolution: 192dpi), (min-width: 75em) and (min-resolution: 2dppx)';
   
 $(document).foundation();
+
+
+// 3. Loading
+// ----------
+
+$(document).ready(function() {
+  if (!Cookies.get('loading')) {
+
+  $(function() {
+    $(".loader").removeClass("hide");
+    $(".loader").addClass("loading");
+    setTimeout(function(){
+     $(".loader").addClass("loaded");
+     Cookies.set('loading', 'true');
+    }, 2500);
+  });
+
+  }
+});
 
 // 3. Menu
 // -------------
@@ -28,7 +58,6 @@ $(".navigation").hover(function(){
  	 $(".home__title").removeClass("hide");
 });
   	
-
 
 // 4. Viewport Height Fix
 // ----------------------
@@ -47,21 +76,7 @@ window.addEventListener('resize', () => {
 });
 
 
-// 1. Loader
-// ---------------
-
-/*
-if ($("body").hasClass("home")) {
-  $( ".loader" ).removeClass( "hide" );
-  $( ".loader" ).addClass( "loading" );
-  setTimeout( function() {
-    $( ".loader" ).addClass( "loaded" );
-  }, 2500 
-  );
-}
-*/
-
-// 4. Animate on Scroll
+// 5. Animate on Scroll
 // --------------------
 
 $(function() {
@@ -74,4 +89,85 @@ $(function() {
 
 $(function() {
 window.addEventListener('load', AOS.refresh);
+});
+
+// 6. Lightgallery
+// ---------------
+
+$('#testinglayout').lightGallery({
+  selector: '.videoelement',
+  counter : false,
+  vimeoPlayerParams: {
+      byline : 0,
+      portrait : 0,
+      color : '272A67'
+  },
+  youtubePlayerParams: {
+      modestbranding: 1,
+      showinfo: 0,
+      rel: 0,
+      controls: 0
+  }
+});
+
+}
+
+// 2. Page Transitions
+// -------------------
+const options = {
+  animationSelector: '[class*="swup-transition-"]',
+  containers: [ '#swup-body', '#swup-header' ],
+  plugins: [ 
+    new SwupBodyClassPlugin(),
+    new SwupGaPlugin(),
+    new SwupScrollPlugin({
+        doScrollingRightAway: false,
+        animateScroll: true,
+        scrollFriction: 0.3,
+        scrollAcceleration: 0.04
+    })
+  ]
+};
+
+
+const swup = new Swup( options );
+
+// 2. Run Once
+// -----------
+init();
+
+swup.on( 'contentReplaced', init );
+
+} );
+
+
+/*
+$(document).mousemove(function(e) {
+    $("html, body").scrollTop(function(i, v) {
+        var h = $(window).height();
+        var y = e.clientY - h / 2;
+        return v + y * 0.1;
+    });
+});
+*/
+
+
+$(function() {
+
+    var $container    = $("#container"),
+        $blocks    = $("#blocks"),
+        heightContainer = $container.outerHeight(),
+        scrolledHeight = $container[0].scrollHeight,
+        mousePos = 0,
+        posY = 0,
+        hDiff = ( scrolledHeight / heightContainer )*0.6
+    
+    $container.mousemove(function(e){
+      mousePos = e.pageY - this.offsetTop;
+    });
+  
+    setInterval(function(){
+		  $blocks.css({marginTop: - mousePos*hDiff });
+	  }, 10);
+
 });

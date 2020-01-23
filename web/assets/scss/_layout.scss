@@ -365,7 +365,7 @@ p a {
     padding: 2rem;
   }
   @include breakpoint(large) {
-    padding: 3rem;
+    padding: 5rem;
   }
 }
 
@@ -447,4 +447,38 @@ p a {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+}
+
+
+/*
+#portfolio-wrap {
+		height:100vh;
+    width:100%;
+		overflow:hidden;  
+	}
+*/
+
+#container {
+overflow: hidden;
+transform: scale(1);
+transition: all .35s cubic-bezier(.39, .575, .565, 1);
+padding-bottom: 10vh;
+}
+
+.h1 {
+  line-height: 1;
+  @include breakpoint(large) {
+  font-size: 9vh;
+  }
+}
+
+.project-container {
+position: fixed;
+width: 100vw;
+height: 100vh;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: -1;
 }

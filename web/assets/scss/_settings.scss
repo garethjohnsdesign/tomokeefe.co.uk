@@ -79,7 +79,7 @@ $foundation-palette: (
 );
 */
 $foundation-palette: (
-  primary: #fefefe, //green
+  primary: #0a0a0a, //green
 //   primary: #ed3348, //red
   secondary: #767676,
   tertiary: #fbeed6,
@@ -93,12 +93,10 @@ $dim-gray: #e5e5e5;
 $medium-gray: #a6a6a6;
 $dark-gray: #757575;
 // $black: #0a0a0a;
-$black: #111111;
+$black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-background: $black;
 $body-font-color: $black;
-$body-font-color: $white;
 // $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-font-family: $sans-regular;
 $body-antialiased: true;
@@ -212,6 +210,7 @@ $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color-hover: scale-color($anchor-color, $lightness: 50%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;

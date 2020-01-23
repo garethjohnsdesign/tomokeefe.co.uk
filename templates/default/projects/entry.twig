@@ -14,10 +14,16 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
+<!-- Wrapper -->
+<div class="wrapper grid-y align-justify viewheight" data-off-canvas-content>
 
+<!-- Header -->
+{% include "_includes/global/navigation" %}
+<!-- End Header -->
 
+<div class="swup-transition-fade" id="swup-body">
 <!-- Content -->
-<div class="grid-x grid-padding-x grid-padding-y align-center" data-aos="fade-in">
+<div class="grid-x grid-padding-x grid-padding-y align-center">
 
 <!-- Previous -->
 <div class="medium-2 cell show-for-large project__pagination">
@@ -105,6 +111,17 @@
 
 </div>   
 <!-- End Content -->
+
+</div>
+
+<!-- Header -->
+{% include "_includes/global/footer" %}
+<!-- End Header -->
+
+</div>
+<!-- End Wrapper -->
+
+
 
 
 {% endblock %}

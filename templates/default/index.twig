@@ -4,111 +4,59 @@
 
 {% block main %}
 
-<!-- Hero -->
-{#
-{% set image = entry.image.one() %}
-<div class="image--24-1 align-center-middle">
 
-  <div class="grid-y grid-padding-x height-100 align-center content" data-aos="fade-in">
-    <div class="shrink cell">
+<div class="project-container">
+  <div class="grid-y align-center" style="height: 100vh;">
 
-      <div class="grid-x">
-        <div class="small-12 cell text-center white">
-        <svg class="icon icon-logo"><use xlink:href="/assets/icons/symbol-defs.svg#icon-logo"></use></svg>
-Test
-        </div>
+
+    <div class="grid-x grid-padding-x align-center">
+      <div class="small-12 medium-6 cell text-center">
+      
+      <div class="flex-video">
+        <video src="https://player.vimeo.com/external/48454530.hd.mp4?s=53708dabb8498263b52937f76045ae3b22cad1b9&profile_id=119" poster="" autoplay="1" loop="1" muted="" playsinline="" preload="auto" class="loop"></video>
       </div>
-
+      
+      </div>
     </div>
-  </div>
-#}
-
-{#
-  {% if entry.video %}
-      <div class="grid-x viewheight">
-        <div class="small-12 cell text-center white">
-          <div class="vimeo-wrapper">
-             <iframe src="https://player.vimeo.com/video/316819254?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-  {% endif %}
-#}
-
-{#
-  <div class="grid-y grid-padding-x height-100 align-right scrollarrow" data-aos="fade-in">
-    <div class="shrink cell">
-
-      <div class="grid-x padding-vertical-2">
-        <div class="small-12 cell text-center white">
-        <a data-scroll href="#page__content"><svg class="icon icon-arrow-down"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow-down"></use></svg></a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-#}
-<!-- End Hero -->
-
-<!-- Layout -->
-<div class="grid-x grid-padding-x grid-padding-y">
   
-  {% set projectsQuery = entry.projects.all() %}
+  </div>
+</div>
 
-  {% for project in projectsQuery %}
-    <div class="{{ project.width.value }} cell">
 
+<!-- Wrapper -->
+<div class="wrapper grid-y align-justify" data-off-canvas-content id="container">
+
+
+<div id="blocks">
+<!-- Header -->
+{% include "_includes/global/navigation" %}
+<!-- End Header -->
+
+<div class="swup-transition-fade" id="swup-body">
+<!-- Layout -->
+  <div class="grid-x grid-padding-x">
+    
+    {% set projectsQuery = entry.projects.all() %}
+    {% for project in projectsQuery %}
+      <div class="small-12 cell text-center">
         {% set item = project.project.one() %}
         <a href="{{ item.url }}">
-          {% set image = item.image.one() %}
-
-          {% switch project.width.label %}
-          {% case "1/6" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-4" %}">
-          {% case "1/3" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-4" %}">
-          {% case "1/2" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-6" %}">
-          {% case "2/3" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-6" %}">
-          {% case "5/6" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}">
-          {% case "1/1" %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}">
-          {% default %}
-            <div class="margin-bottom-1 image--24-1 act--link" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}">
-          {% endswitch %}
-
-          {% if project.featured %}
-              <div class="content grid-y align-center show-for-medium">
-                <div class="shrink cell padding-1 text-center">
-                  <svg class="icon icon-play_arrow margin-top-1"><use xlink:href="/assets/icons/symbol-defs.svg#icon-play_arrow"></use></svg>
-                  <div class="sans-regular text-center"><span class="project__title sans-bold text-uppercase">{{ item.title }}</span>{% if item.client %}<span class="dark-gray project__client padding-left-1">{{ item.client }}</span>{% endif %}</div>
-                </div>
-              </div>
-          {% else %}
-              <div class="content grid-y align-center act__hover">
-                <div class="shrink cell padding-1 text-center">
-{#                   <svg class="icon icon-play_arrow margin-top-1"><use xlink:href="/assets/icons/symbol-defs.svg#icon-play_arrow"></use></svg> #}
-                </div>
-              </div>
-          {% endif %}
-          </div>
-          
-          {% if project.featured %}
-          <div class="sans-regular text-center show-for-small-only"><span class="project__title sans-bold text-uppercase">{{ item.title }}</span>{% if item.client %}<span class="dark-gray project__client padding-left-1">{{ item.client }}</span>{% endif %}</div>
-          {% else %}
-          <div class="sans-regular text-center"><span class="project__title sans-bold text-uppercase">{{ item.title }}</span>{% if item.client %}<span class="dark-gray project__client padding-left-1">{{ item.client }}</span>{% endif %}</div>
-          {% endif %}
+          <div class="h1 text-uppercase margin-bottom-0">{{ item.project }}</div>
         </a>
+      </div>
+    {% endfor %}
+  
+  </div>
+<!-- End Layout -->
+</div>
 
-    </div>
-  {% endfor %}
+<!-- Header -->
+{% include "_includes/global/footer" %}
+<!-- End Header -->
 
 </div>
-<!-- End Layout -->
+<!-- End Wrapper -->
 
+</div>
 
 {% endblock %}

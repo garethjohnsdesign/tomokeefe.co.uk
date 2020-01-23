@@ -2,9 +2,23 @@
 
 {% block body %}
 
+
+{% block videos %}
+{% endblock %}
+
+<!-- Wrapper -->
+<div class="wrapper grid-y align-justify" data-off-canvas-content {% if bodyClass == 'home' %}id="container"{% endif %}>
+
+{% block navigation %}
+{% endblock %}
+
 {% block main %}
 {% endblock %}
 
+{% block footer %}
+{% endblock %}
+
+</div>
 
 <!-- Navigation -->
 {% include "_includes/reveal/navigation" %}

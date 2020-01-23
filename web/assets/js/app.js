@@ -5,17 +5,10 @@ import $ from "jquery";
 import Foundation from 'foundation-sites';
 import Cookies from 'js-cookie'
 import AOS from 'aos';
-import Swup from 'swup';
 import "lightGallery";
 import "lg-fullscreen";
 import "lg-video";
-import SwupBodyClassPlugin from "@swup/body-class-plugin";
-import SwupScrollPlugin from '@swup/scroll-plugin';
-import SwupGaPlugin from '@swup/ga-plugin';
 
-
-$( document ).ready( function() {
-  function init() {
 
 // 2. Foundation
 // ----------
@@ -109,47 +102,6 @@ $('#testinglayout').lightGallery({
       controls: 0
   }
 });
-
-}
-
-// 2. Page Transitions
-// -------------------
-const options = {
-  animationSelector: '[class*="swup-transition-"]',
-  containers: [ '#swup-body', '#swup-header' ],
-  plugins: [ 
-    new SwupBodyClassPlugin(),
-    new SwupGaPlugin(),
-    new SwupScrollPlugin({
-        doScrollingRightAway: false,
-        animateScroll: true,
-        scrollFriction: 0.3,
-        scrollAcceleration: 0.04
-    })
-  ]
-};
-
-
-const swup = new Swup( options );
-
-// 2. Run Once
-// -----------
-init();
-
-swup.on( 'contentReplaced', init );
-
-} );
-
-
-/*
-$(document).mousemove(function(e) {
-    $("html, body").scrollTop(function(i, v) {
-        var h = $(window).height();
-        var y = e.clientY - h / 2;
-        return v + y * 0.1;
-    });
-});
-*/
 
 
 $(function() {

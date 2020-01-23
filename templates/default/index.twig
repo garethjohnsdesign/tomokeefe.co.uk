@@ -2,13 +2,9 @@
 
 {% extends "default/_layouts/site" %}
 
-{% block main %}
 
-
-<div class="project-container">
-  <div class="grid-y align-center" style="height: 100vh;">
-
-
+{% block videos %}
+  <div class="grid-y align-center project-container">
     <div class="grid-x grid-padding-x align-center">
       <div class="small-12 medium-6 cell text-center">
       
@@ -18,45 +14,33 @@
       
       </div>
     </div>
-  
   </div>
-</div>
-
-
-<!-- Wrapper -->
-<div class="wrapper grid-y align-justify" data-off-canvas-content id="container">
-
-
-<div id="blocks">
-<!-- Header -->
-{% include "_includes/global/navigation" %}
-<!-- End Header -->
-
-<div class="swup-transition-fade" id="swup-body">
-<!-- Layout -->
-  <div class="grid-x grid-padding-x">
-    
-    {% set projectsQuery = entry.projects.all() %}
-    {% for project in projectsQuery %}
-      <div class="small-12 cell text-center">
-        {% set item = project.project.one() %}
-        <a href="{{ item.url }}">
-          <div class="h1 text-uppercase margin-bottom-0">{{ item.project }}</div>
-        </a>
-      </div>
-    {% endfor %}
-  
-  </div>
-<!-- End Layout -->
-</div>
-
-<!-- Header -->
-{% include "_includes/global/footer" %}
-<!-- End Header -->
-
-</div>
-<!-- End Wrapper -->
-
-</div>
-
 {% endblock %}
+
+
+{% block navigation %}
+<div id="blocks">
+{% include "_includes/global/navigation" %}
+{% endblock %}
+
+{% block main %}
+<div class="grid-x grid-padding-x">
+  
+  {% set projectsQuery = entry.projects.all() %}
+  {% for project in projectsQuery %}
+    <div class="small-12 cell text-center">
+      {% set item = project.project.one() %}
+      <a href="{{ item.url }}">
+        <div class="h1 text-uppercase margin-bottom-0">{{ item.project }}</div>
+      </a>
+    </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "_includes/global/footer" %}
+</div>
+{% endblock %}
+

@@ -10602,7 +10602,7 @@ p a {
       padding: 2rem; } }
   @media print, screen and (min-width: 64em) {
     .wrapper {
-      padding: 5rem; } }
+      padding: 3rem; } }
 
 .footer {
   /*
@@ -10682,6 +10682,7 @@ p a {
   overflow: hidden;
   transform: scale(1);
   transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding-top: 10vh;
   padding-bottom: 10vh; }
 
 .h1 {

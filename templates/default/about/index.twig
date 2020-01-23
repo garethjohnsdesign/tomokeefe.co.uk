@@ -1,10 +1,13 @@
-{% set bodyClass = 'info' %}
+{% set bodyClass = 'about' %}
 
 {% extends "_layouts/site" %}
 
-{% block main %}
+{% block navigation %}
+{% include "_includes/global/navigation" %}
+{% endblock %}
 
-<!-- Copy -->
+
+{% block main %}
 <div class="grid-container">
   <div class="grid-x grid-padding-x grid-padding-y align-center align-middle">
     <div class="small-12 medium-10 large-9 cell text-center">
@@ -12,6 +15,8 @@
     </div>
   </div>
 </div>
-<!-- End Copy -->
+{% endblock %}
 
+{% block footer %}
+{% include "_includes/global/footer" %}
 {% endblock %}

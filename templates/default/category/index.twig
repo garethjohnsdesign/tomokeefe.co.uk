@@ -6,6 +6,10 @@
 
 {% extends "_layouts/site" %}
 
+{% block navigation %}
+{% include "_includes/global/navigation" %}
+{% endblock %}
+
 {% block main %}
 
 <!-- Projects -->
@@ -22,4 +26,9 @@
   {% endfor %}
 </div>
 <!-- End Projects -->
+{% endblock %}
+
+
+{% block footer %}
+{% include "_includes/global/footer" %}
 {% endblock %}

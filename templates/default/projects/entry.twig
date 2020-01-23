@@ -13,15 +13,14 @@
 
 {% extends "_layouts/site" %}
 
-{% block main %}
-<!-- Wrapper -->
-<div class="wrapper grid-y align-justify viewheight" data-off-canvas-content>
 
-<!-- Header -->
+{% block navigation %}
 {% include "_includes/global/navigation" %}
-<!-- End Header -->
+{% endblock %}
 
-<div class="swup-transition-fade" id="swup-body">
+
+{% block main %}
+
 <!-- Content -->
 <div class="grid-x grid-padding-x grid-padding-y align-center">
 
@@ -112,16 +111,11 @@
 </div>   
 <!-- End Content -->
 
-</div>
 
-<!-- Header -->
+
+{% endblock %}
+
+
+{% block footer %}
 {% include "_includes/global/footer" %}
-<!-- End Header -->
-
-</div>
-<!-- End Wrapper -->
-
-
-
-
 {% endblock %}

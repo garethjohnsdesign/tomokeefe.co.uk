@@ -24,6 +24,7 @@
     "motion-ui": "~2.0.0",
     "package": "^1.0.1",
     "swup": "^2.0.8",
+    "tornis": "^0.2.1",
     "what-input": "^5.2.6"
   },
   "private": true

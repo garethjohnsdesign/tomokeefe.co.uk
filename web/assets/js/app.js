@@ -9,6 +9,10 @@ import "lightGallery";
 import "lg-fullscreen";
 import "lg-video";
 
+import watchViewport from 'tornis';
+import unwatchViewport from 'tornis';
+import getViewportState from 'tornis';
+import recalibrateOrientation from 'tornis';
 
 // 2. Foundation
 // ----------
@@ -104,6 +108,7 @@ $('#testinglayout').lightGallery({
 });
 
 
+/*
 $(function() {
 
     var $container    = $("#container"),
@@ -122,4 +127,105 @@ $(function() {
 		  $blocks.css({marginTop: - mousePos*hDiff });
 	  }, 10);
 
+});
+*/
+
+
+
+
+
+/*
+
+// define a watched function, to be run on each update
+const updateValues = ({ size, scroll, mouse, position, orientation }) => {
+  if (size.changed) {
+    // do something related to size
+  }
+  
+  if (scroll.changed) {
+    // do something related to scroll position or velocity
+  }
+ 
+  if (mouse.changed) {
+    // do something related to mouse position or velocity
+  }
+ 
+  if (position.changed) {
+    // do something related to browser window position or velocity
+  }
+ 
+  if (orientation.changed) {
+    // do something related to device orientation
+  }
+};
+ 
+// bind the watch function
+// By default this will run the function as it is added to the watch list
+watchViewport(updateValues);
+ 
+// to bind the watch function without calling it
+watchViewport(updateValues, false);
+ 
+// when you want to stop updating
+unwatchViewport(updateValues);
+ 
+// to get a snapshot of the current viewport state
+const state = getViewportState();
+ 
+// to reset the default device orientation.
+const calibrationData = recalibrateOrientation();
+*/
+
+
+
+
+
+    const animateView = ({ size, scroll, mouse, orientation }) => {
+
+      // Update the zoom based on scroll position
+      if (scroll.changed) {
+        let scrollOffset = scroll.top / (size.docY - size.y);
+        
+        // clamp values
+        scrollOffset = scrollOffset < 0 ? 0 : scrollOffset;
+        scrollOffset = scrollOffset > 1 ? 1 : scrollOffset;
+        
+        // update scroll position CSS var
+        document.body.style.setProperty('--scrollY', scrollOffset);
+      }
+
+      // update the camera angle based on mouse position from center or device orientation
+      if (mouse.changed || orientation.changed) {
+        let xFromCenter;
+        let yFromCenter;
+
+        if (mouse.changed) {
+          xFromCenter = (mouse.x - size.x / 2) / (size.x / 2);
+          yFromCenter = (mouse.y - size.y / 2) / (size.y / 2);
+        }
+
+        if (orientation.changed) {
+          xFromCenter = orientation.gamma / 22.5;
+          yFromCenter = orientation.beta / 22.5;
+        }
+
+        // clamp values
+        xFromCenter = xFromCenter < -1 ? -1 : xFromCenter;
+        xFromCenter = xFromCenter > 1 ? 1 : xFromCenter;
+        yFromCenter = yFromCenter < -1 ? -1 : yFromCenter;
+        yFromCenter = yFromCenter > 1 ? 1 : yFromCenter;
+
+        // update scroll position CSS var
+        document.body.style.setProperty('--shiftX', xFromCenter);
+        document.body.style.setProperty('--shiftY', yFromCenter);
+      }
+
+    };
+
+    __TORNIS.watchViewport(animateView);
+
+
+$(".list li a").hover( function() { // Changes the .image-holder's img src to the src defined in .list a's data attribute.
+    var value=$(this).attr('data-src');
+    $(".image-holder img").attr("src", value);
 });

@@ -51,7 +51,7 @@
 }
 
 a {
-  transition: all .35s cubic-bezier(.39, .575, .565, 1);
+//   transition: all .35s cubic-bezier(.39, .575, .565, 1);
 }
 
 a:focus {
@@ -462,14 +462,16 @@ p a {
 overflow: hidden;
 transform: scale(1);
 transition: all .35s cubic-bezier(.39, .575, .565, 1);
+/*
 padding-top: 10vh;
-padding-bottom: 10vh;
+padding-bottom: 20vh;
+*/
 }
 
 .h1 {
   line-height: 1;
   @include breakpoint(large) {
-  font-size: 9vh;
+  font-size: 8vh;
   }
 }
 
@@ -482,4 +484,10 @@ bottom: 0;
 left: 0;
 right: 0;
 z-index: -1;
+}
+
+
+#blocks {
+transition: all 1.0s cubic-bezier(0, 0, 0.58, 1);
+transform: translate3d(0,calc(var(--shiftY) * -25%),0);
 }

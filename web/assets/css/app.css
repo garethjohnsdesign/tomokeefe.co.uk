@@ -10229,9 +10229,6 @@ a.mapboxgl-ctrl-logo.mapboxgl-compact {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100); }
 
-a {
-  transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1); }
-
 a:focus {
   color: #fefefe; }
 
@@ -10682,14 +10679,16 @@ p a {
   overflow: hidden;
   transform: scale(1);
   transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
-  padding-top: 10vh;
-  padding-bottom: 10vh; }
+  /*
+padding-top: 10vh;
+padding-bottom: 20vh;
+*/ }
 
 .h1 {
   line-height: 1; }
   @media print, screen and (min-width: 64em) {
     .h1 {
-      font-size: 9vh; } }
+      font-size: 8vh; } }
 
 .project-container {
   position: fixed;
@@ -10700,3 +10699,7 @@ p a {
   left: 0;
   right: 0;
   z-index: -1; }
+
+#blocks {
+  transition: all 1s cubic-bezier(0, 0, 0.58, 1);
+  transform: translate3d(0, calc(var(--shiftY) * -25%), 0); }

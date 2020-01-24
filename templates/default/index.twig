@@ -4,38 +4,47 @@
 
 
 {% block videos %}
-  <div class="grid-y align-center project-container">
+  <div class="grid-y align-center project-container" style="height: 100vh;">
+  <div class="shrink cell">
+
     <div class="grid-x grid-padding-x align-center">
       <div class="small-12 medium-6 cell text-center">
+
+{% set image = entry.image.one() %}
+<div class="image-holder">
+  <img data-interchange="">
+</div>
+
       
-      <div class="flex-video">
-        <video src="https://player.vimeo.com/external/48454530.hd.mp4?s=53708dabb8498263b52937f76045ae3b22cad1b9&profile_id=119" poster="" autoplay="1" loop="1" muted="" playsinline="" preload="auto" class="loop"></video>
       </div>
-      
-      </div>
+
     </div>
+
+  </div>
   </div>
 {% endblock %}
 
 
 {% block navigation %}
-<div id="blocks">
+<div id="blocks" data-aos="fade-in" data-aos-delay="5000">
 {% include "_includes/global/navigation" %}
 {% endblock %}
 
 {% block main %}
 <div class="grid-x grid-padding-x">
-  
+  <div class="small-12 cell text-center">
+
+<ul class="list no-bullet">
   {% set projectsQuery = entry.projects.all() %}
   {% for project in projectsQuery %}
-    <div class="small-12 cell text-center">
       {% set item = project.project.one() %}
-      <a href="{{ item.url }}">
-        <div class="h1 text-uppercase margin-bottom-0">{{ item.project }}</div>
-      </a>
-    </div>
-  {% endfor %}
+      {% set image = item.image.one() %}
+      <li>
+        <a href="{{ item.url }}" class="h1 text-uppercase margin-bottom-0" data-src="{{craft.imager.transformImage(image, { width: (craft.app.config.general.breakpointsContained.medium / 2), dpr: 2, ratio: 16/9, position: image.getFocalPoint() }).url}}" >{{ item.project }}</a>
 
+      </li>
+  {% endfor %}
+  </div>
 </div>
 {% endblock %}
 

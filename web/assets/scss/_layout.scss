@@ -468,11 +468,18 @@ padding-bottom: 20vh;
 */
 }
 
+
 .h1 {
+  -webkit-text-stroke: 2px transparent;
   line-height: 1;
   @include breakpoint(large) {
   font-size: 8vh;
   }
+}
+
+.h1:hover {
+  -webkit-text-stroke: 2px $white;
+  -webkit-text-fill-color: transparent;
 }
 
 .project-container {
@@ -489,5 +496,5 @@ z-index: -1;
 
 #blocks {
 transition: all 1.0s cubic-bezier(0, 0, 0.58, 1);
-transform: translate3d(0,calc(var(--shiftY) * -25%),0);
+transform: translate3d(0,calc(var(--shiftY) * -5%),0);
 }

@@ -2,9 +2,23 @@
 <footer class="grid-x grid-padding-x grid-padding-y align-center align-middle footer">
 
   <div class="small-11 cell text-center text-uppercase">
-    <a href="/contact" class="medium-gray">
-      © {{ "now"|date("Y") }} London — Berlin
-    </a>
+    <ul class="menu align-center margin-top-1 dark-gray">
+        {% for block in site.socials.all() %}
+        {% switch block.type %}
+          {% case "facebook" %}
+        
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-facebook"><use xlink:href="/assets/icons/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+        
+          {% case "instagram" %}
+          
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-instagram"><use xlink:href="/assets/icons/symbol-defs.svg#icon-instagram"></use></svg></a></li>
+        
+          {% case "twitter" %}
+          
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-twitter"><use xlink:href="/assets/icons/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+          {% endswitch %}
+        {% endfor %}
+      </ul>
   </div>
 
 </footer>

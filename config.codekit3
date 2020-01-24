@@ -982,38 +982,6 @@
 		"oAP": "/web/assets/favicons/site.webmanifest",
 		"oF": 0
 		},
-	"/web/assets/fonts/futura-std-book.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/web/assets/fonts/futura-std-book.woff",
-		"oF": 0
-		},
-	"/web/assets/fonts/futura-std-book.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/web/assets/fonts/futura-std-book.woff2",
-		"oF": 0
-		},
-	"/web/assets/fonts/futura-std-condensed-extra-bold.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/web/assets/fonts/futura-std-condensed-extra-bold.woff",
-		"oF": 0
-		},
-	"/web/assets/fonts/futura-std-condensed-extra-bold.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/web/assets/fonts/futura-std-condensed-extra-bold.woff2",
-		"oF": 0
-		},
 	"/web/assets/fonts/gallery.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -1044,6 +1012,22 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/web/assets/fonts/gt-america-condensed-bold.woff2",
+		"oF": 0
+		},
+	"/web/assets/fonts/gt-america-medium.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/gt-america-medium.woff",
+		"oF": 0
+		},
+	"/web/assets/fonts/gt-america-medium.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/gt-america-medium.woff2",
 		"oF": 0
 		},
 	"/web/assets/icons/symbol-defs.svg": {

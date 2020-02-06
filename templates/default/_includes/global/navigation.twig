@@ -14,7 +14,9 @@
 
     <div class="home__menu hide">
       <ul class="menu align-center">
-        <li><a href="/" class="text-uppercase sans-bold h3">Home</a></li>
+        {% if env == 'dev' %}
+          <li><a href="/" class="text-uppercase sans-bold h3">Home</a></li>
+        {% endif %}
         {% nav category in craft.categories.group('typeOfFilm') %}
             <li>
              <a href="{{ category.url }}" class="text-uppercase sans-bold h4">{{ category.title }}</a>

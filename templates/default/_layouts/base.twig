@@ -3,6 +3,7 @@
 {% set asset = seo.seoImage.one() %}
 {% set seoImage = craft.imager.transformImage(asset, { width: 1200, height: 630, dpr: 1, position: asset.getFocalPoint() }) %}
 {% set staticAssetsVersion = craft.app.config.general.staticAssetsVersion %}
+{% set env = getenv('ENVIRONMENT') %}
 
 {%- minify -%}
 <!DOCTYPE html>

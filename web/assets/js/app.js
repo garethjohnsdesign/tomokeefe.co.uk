@@ -176,7 +176,7 @@ $(".list li a").hover( function() { // Changes the .image-holder's img src to th
 // -------------------
 const options = {
   animationSelector: '[class*="swup-transition-"]',
-  containers: [ '#swup-body', '#swup-header' ],
+  containers: [ '#swup-body', '#swup-header', '#overlayNavigation' ],
   plugins: [ 
     new SwupBodyClassPlugin(),
     new SwupGaPlugin(),

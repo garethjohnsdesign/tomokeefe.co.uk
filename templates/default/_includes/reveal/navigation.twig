@@ -6,11 +6,11 @@
       <li><a href="/" class="text-uppercase sans-bold h4">Home</a></li>
       {% nav category in craft.categories.group('typeOfFilm') %}
           <li>
-           <a href="{{ category.url }}" class="text-uppercase sans-bold h4">{{ category.title }}</a>
+           <a href="{{ category.url }}" class="text-uppercase sans-bold h4" data-toggle="overlayNavigation">{{ category.title }}</a>
           </li>
       {% endnav %}
-      <li><a href="/about" class="text-uppercase sans-bold h4">About</a></li>
-      <li><a href="/contact" class="text-uppercase sans-bold h4">Contact</a></li>
+      <li><a href="/about" class="text-uppercase sans-bold h4" data-toggle="overlayNavigation">About</a></li>
+      <li><a href="/contact" class="text-uppercase sans-bold h4" data-toggle="overlayNavigation">Contact</a></li>
     </ul>
 
     <div class="shrink cell text-center">

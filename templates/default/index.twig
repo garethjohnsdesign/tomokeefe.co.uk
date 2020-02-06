@@ -2,6 +2,11 @@
 
 {% extends "default/_layouts/site" %}
 
+{% block navigation %}
+{% include "_includes/global/navigation" %}
+{% endblock %}
+
+{% block main %}
 
 {% block videos %}
   <div class="grid-y align-center project-container" style="height: 100vh;">
@@ -25,11 +30,6 @@
 {% endblock %}
 
 
-{% block navigation %}
-{% include "_includes/global/navigation" %}
-{% endblock %}
-
-{% block main %}
 <div id="blocks" data-aos="fade-in" data-aos-delay="5000">
 <div class="grid-x grid-padding-x">
   <div class="small-12 cell text-center">

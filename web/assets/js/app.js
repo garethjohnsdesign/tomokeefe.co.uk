@@ -5,14 +5,22 @@ import $ from "jquery";
 import Foundation from 'foundation-sites';
 import Cookies from 'js-cookie'
 import AOS from 'aos';
+import Swup from 'swup';
 import "lightGallery";
 import "lg-fullscreen";
 import "lg-video";
+import SwupBodyClassPlugin from "@swup/body-class-plugin";
+import SwupScrollPlugin from '@swup/scroll-plugin';
+import SwupGaPlugin from '@swup/ga-plugin';
 
 import watchViewport from 'tornis';
 import unwatchViewport from 'tornis';
 import getViewportState from 'tornis';
 import recalibrateOrientation from 'tornis';
+
+
+$( document ).ready( function() {
+  function init() {
 
 // 2. Foundation
 // ----------
@@ -108,76 +116,6 @@ $('#testinglayout').lightGallery({
 });
 
 
-/*
-$(function() {
-
-    var $container    = $("#container"),
-        $blocks    = $("#blocks"),
-        heightContainer = $container.outerHeight(),
-        scrolledHeight = $container[0].scrollHeight,
-        mousePos = 0,
-        posY = 0,
-        hDiff = ( scrolledHeight / heightContainer )*0.6
-    
-    $container.mousemove(function(e){
-      mousePos = e.pageY - this.offsetTop;
-    });
-  
-    setInterval(function(){
-		  $blocks.css({marginTop: - mousePos*hDiff });
-	  }, 10);
-
-});
-*/
-
-
-
-
-
-/*
-
-// define a watched function, to be run on each update
-const updateValues = ({ size, scroll, mouse, position, orientation }) => {
-  if (size.changed) {
-    // do something related to size
-  }
-  
-  if (scroll.changed) {
-    // do something related to scroll position or velocity
-  }
- 
-  if (mouse.changed) {
-    // do something related to mouse position or velocity
-  }
- 
-  if (position.changed) {
-    // do something related to browser window position or velocity
-  }
- 
-  if (orientation.changed) {
-    // do something related to device orientation
-  }
-};
- 
-// bind the watch function
-// By default this will run the function as it is added to the watch list
-watchViewport(updateValues);
- 
-// to bind the watch function without calling it
-watchViewport(updateValues, false);
- 
-// when you want to stop updating
-unwatchViewport(updateValues);
- 
-// to get a snapshot of the current viewport state
-const state = getViewportState();
- 
-// to reset the default device orientation.
-const calibrationData = recalibrateOrientation();
-*/
-
-
-
 
 
     const animateView = ({ size, scroll, mouse, orientation }) => {
@@ -229,3 +167,34 @@ $(".list li a").hover( function() { // Changes the .image-holder's img src to th
     var value=$(this).attr('data-src');
     $(".image-holder img").attr("src", value);
 });
+
+}
+
+
+
+// 2. Page Transitions
+// -------------------
+const options = {
+  animationSelector: '[class*="swup-transition-"]',
+  containers: [ '#swup-body', '#swup-header' ],
+  plugins: [ 
+    new SwupBodyClassPlugin(),
+    new SwupGaPlugin(),
+    new SwupScrollPlugin({
+        doScrollingRightAway: false,
+        animateScroll: true,
+        scrollFriction: 0.3,
+        scrollAcceleration: 0.04
+    })
+  ]
+};
+
+const swup = new Swup( options );
+
+// 2. Run Once
+// -----------
+init();
+
+swup.on( 'contentReplaced', init );
+
+} );

@@ -10344,9 +10344,11 @@ padding-bottom: 20vh;
   right: 0;
   z-index: -1; }
 
+/*
 #blocks {
-  transition: all 1s cubic-bezier(0, 0, 0.58, 1);
-  transform: translate3d(0, calc(var(--shiftY) * -5%), 0); }
-
+transition: all 1.0s cubic-bezier(0, 0, 0.58, 1);
+transform: translate3d(0,calc(var(--shiftY) * -5%),0);
+}
+*/
 h1, h2, h3 {
   text-transform: uppercase; }

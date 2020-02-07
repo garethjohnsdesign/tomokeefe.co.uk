@@ -26839,7 +26839,7 @@
 	// -------------------
 	const options = {
 	  animationSelector: '[class*="swup-transition-"]',
-	  containers: [ '#swup-body', '#swup-header' ],
+	  containers: [ '#swup-body', '#swup-header', '#swup-overlay', '#swup-navigation' ],
 	  plugins: [ 
 	    new SwupBodyClassPlugin(),
 	    new SwupGaPlugin(),

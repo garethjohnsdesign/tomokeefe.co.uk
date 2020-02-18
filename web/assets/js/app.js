@@ -13,11 +13,6 @@ import SwupBodyClassPlugin from "@swup/body-class-plugin";
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import SwupGaPlugin from '@swup/ga-plugin';
 
-import watchViewport from 'tornis';
-import unwatchViewport from 'tornis';
-import getViewportState from 'tornis';
-import recalibrateOrientation from 'tornis';
-
 
 $( document ).ready( function() {
   function init() {
@@ -115,53 +110,8 @@ $('#testinglayout').lightGallery({
   }
 });
 
-
-
-
-    const animateView = ({ size, scroll, mouse, orientation }) => {
-
-      // Update the zoom based on scroll position
-      if (scroll.changed) {
-        let scrollOffset = scroll.top / (size.docY - size.y);
-        
-        // clamp values
-        scrollOffset = scrollOffset < 0 ? 0 : scrollOffset;
-        scrollOffset = scrollOffset > 1 ? 1 : scrollOffset;
-        
-        // update scroll position CSS var
-        document.body.style.setProperty('--scrollY', scrollOffset);
-      }
-
-      // update the camera angle based on mouse position from center or device orientation
-      if (mouse.changed || orientation.changed) {
-        let xFromCenter;
-        let yFromCenter;
-
-        if (mouse.changed) {
-          xFromCenter = (mouse.x - size.x / 2) / (size.x / 2);
-          yFromCenter = (mouse.y - size.y / 2) / (size.y / 2);
-        }
-
-        if (orientation.changed) {
-          xFromCenter = orientation.gamma / 22.5;
-          yFromCenter = orientation.beta / 22.5;
-        }
-
-        // clamp values
-        xFromCenter = xFromCenter < -1 ? -1 : xFromCenter;
-        xFromCenter = xFromCenter > 1 ? 1 : xFromCenter;
-        yFromCenter = yFromCenter < -1 ? -1 : yFromCenter;
-        yFromCenter = yFromCenter > 1 ? 1 : yFromCenter;
-
-        // update scroll position CSS var
-        document.body.style.setProperty('--shiftX', xFromCenter);
-        document.body.style.setProperty('--shiftY', yFromCenter);
-      }
-
-    };
-
-    __TORNIS.watchViewport(animateView);
-
+// 6. Hover
+// --------
 
 $(".list li a").hover( function() { // Changes the .image-holder's img src to the src defined in .list a's data attribute.
     var value=$(this).attr('data-src');
@@ -170,13 +120,11 @@ $(".list li a").hover( function() { // Changes the .image-holder's img src to th
 
 }
 
-
-
 // 2. Page Transitions
 // -------------------
 const options = {
   animationSelector: '[class*="swup-transition-"]',
-  containers: [ '#swup-body', '#swup-header', '#overlayNavigation' ],
+  containers: [ '#swup-body', '#swup-header', '#swup-overlay', '#swup-navigation' ],
   plugins: [ 
     new SwupBodyClassPlugin(),
     new SwupGaPlugin(),

@@ -1,4 +1,4 @@
-<nav class="show-for-small-only full reveal primary-background-colour" id="overlayNavigation" data-reveal>
+<nav class="show-for-small-only full reveal primary-background-colour" id="overlayNavigation" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
   <div class="grid-x grid-padding-x grid-padding-y align-center-middle" style="height: 100%">
     <div class="shrink cell text-center">
 
@@ -6,11 +6,11 @@
       <li><a href="/" class="text-uppercase sans-bold h4">Home</a></li>
       {% nav category in craft.categories.group('typeOfFilm') %}
           <li>
-           <a href="{{ category.url }}" class="text-uppercase sans-bold h4">{{ category.title }}</a>
+           <a href="{{ category.url }}" class="text-uppercase sans-bold h4" data-close>{{ category.title }}</a>
           </li>
       {% endnav %}
-      <li><a href="/about" class="text-uppercase sans-bold h4">About</a></li>
-      <li><a href="/contact" class="text-uppercase sans-bold h4">Contact</a></li>
+      <li><a href="/about" class="text-uppercase sans-bold h4" data-close>About</a></li>
+      <li><a href="/contact" class="text-uppercase sans-bold h4" data-close>Contact</a></li>
     </ul>
 
     <div class="shrink cell text-center">
